@@ -32,11 +32,15 @@
                 </Border>
             </StackPanel>
 
-            <Button x:Name="btnCadLivro" Content="Cadastrar Livro" FontSize="15" Width="150" Height="40"/>
-            <Button x:Name="btnCadLeitor" Content="Cadastrar Leitor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0"/>
-            <Button x:Name="btnCadAutor" Content="Cadastrar Autor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0"/>
-            <Button x:Name="btnCadFornecedor" Content="Cadastrar Fornecedor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0"/>
+            <Button x:Name="btnCadLivro" Content="Cadastrar Livro" FontSize="15" Width="150" Height="40" Click="btnCadLivro_Click"/>
+            <Button x:Name="btnCadLeitor" Content="Cadastrar Leitor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0" Click="btnCadLeitor_Click"/>
+            <Button x:Name="btnCadAutor" Content="Cadastrar Autor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0" Click="btnCadAutor_Click"/>
+            <Button x:Name="btnCadFornecedor" Content="Cadastrar Fornecedor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0" Click="btnCadFornecedor_Click"/>
             <Button x:Name="btnCadFuncionario" Content="Cadastrar Funcionário" FontSize="15" Width="150" Height="40" Margin="0 20 0 0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Background="Aqua">
+            <Frame x:Name="fraPages" NavigationUIVisibility="Hidden"/>
         </StackPanel>
     </Grid>
 </Window>

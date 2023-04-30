@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System_Biblioteca.Views;
 
-namespace System_Biblioteca
+namespace System_Biblioteca.Views.Pages
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para CadLivroFormPage.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CadLivroFormPage : Page
     {
-        public MainWindow()
+        public CadLivroFormPage()
         {
             InitializeComponent();
-        }
-
-        private void btnCadastrar_Click(object sender, RoutedEventArgs e)
-        {
-            SideNavBarFormWindow view = new SideNavBarFormWindow();
-            view.ShowDialog();
         }
     }
 }

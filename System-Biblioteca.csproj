@@ -126,6 +126,18 @@
     <Compile Include="Views\CadLivro.xaml.cs">
       <DependentUpon>CadLivro.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\CadAutorFormPage.xaml.cs">
+      <DependentUpon>CadAutorFormPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\CadFornecedorFormPage.xaml.cs">
+      <DependentUpon>CadFornecedorFormPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\CadLeitorFormPage.xaml.cs">
+      <DependentUpon>CadLeitorFormPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\CadLivroFormPage.xaml.cs">
+      <DependentUpon>CadLivroFormPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SideNavBarFormWindow.xaml.cs">
       <DependentUpon>SideNavBarFormWindow.xaml</DependentUpon>
     </Compile>
@@ -161,6 +173,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadLivro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\CadAutorFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\CadFornecedorFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\CadLeitorFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\CadLivroFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

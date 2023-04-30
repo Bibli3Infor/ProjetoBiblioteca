@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System_Biblioteca.Views;
 
 namespace System_Biblioteca
 {
@@ -23,6 +24,12 @@ namespace System_Biblioteca
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+            CadFuncionario view = new CadFuncionario();
+            view.ShowDialog();
         }
     }
 }

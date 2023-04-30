@@ -43,18 +43,18 @@
                    FontWeight="Bold"
                    Padding="20"
                    HorizontalAlignment="Center"/>
-                <StackPanel HorizontalAlignment="Center" Margin="0 20 0 0">
+                <StackPanel HorizontalAlignment="Center" Margin="10 20 50 0">
                     <TextBlock FontSize="20" Margin="45 0 0 0"><Run Language="pt-br" Text="Email"/><Run Text=":"/></TextBlock>
                     <StackPanel Orientation="Horizontal" >
                         <Image
                        Width="35" 
                        Height="35" 
                        Margin="0 5 10 0" Source="/perfil.png"/>
-                        <TextBox x:Name="txtEmail" Width="250" Margin="0 10 50 0" Padding="8"/>
+                        <TextBox x:Name="txtEmail" Width="250" Margin="0 10 0 0" Padding="8"/>
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel HorizontalAlignment="Center" Margin="0 20 50 0">
+                <StackPanel HorizontalAlignment="Center" Margin="10 20 50 0">
                     <TextBlock FontSize="20" Margin="45 0 0 0"><Run Language="pt-br" Text="Senha"/><Run Text=":"/></TextBlock>
                     <StackPanel Orientation="Horizontal" >
                         <Image
@@ -65,7 +65,9 @@
                     </StackPanel>
                 </StackPanel>
                 <Button x:Name="btnEntrar" Background="#FF4388CD" Content="ENTRAR" FontSize="15" Width="250" Height="44" Cursor="Hand" Margin="0 100 0 0" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <Button x:Name="btnCadastrar"  Content="cadastrar" FontSize="15" Cursor="Hand" Margin="14 70 0 0" FontWeight="Bold" HorizontalAlignment="Center" BorderBrush="#00707070" Background="#00DDDDDD"/>
+                <Button x:Name="btnCadastrar"  Content="cadastrar" FontSize="15" Cursor="Hand" Margin="14 70 0 0" FontWeight="Bold" HorizontalAlignment="Center" BorderBrush="#00707070" Background="#00DDDDDD" Click="btnCadastrar_Click"/>
+
+
 
             </StackPanel>
         </Grid>

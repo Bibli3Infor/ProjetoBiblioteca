@@ -60,14 +60,14 @@
                 </Border>
             </StackPanel>
 
-            <TextBlock Text="Código:" FontSize="20" Margin="0 10 0 0"/>
+            <TextBlock Text="Código:" FontSize="20" Margin="0 15 0 0"/>
             <TextBox x:Name="txtCodLivro" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
 
             <TextBlock Text="Edição:" FontSize="20" Margin="0 30 0 0"/>
             <TextBox x:Name="txtCodALivro" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 30">
             <Button x:Name="btnCancelarLivro" Content="Cancelar" FontSize="15" Padding="8" Width="109" Height="44" Cursor="Hand" Background="#FF003DFF" FontWeight="Bold"/>
             <Button x:Name="btnSalvarLivro" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="109" Height="44" Margin="50 0 60 0" Cursor="Hand" FontWeight="Bold"/>
         </StackPanel>

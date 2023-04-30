@@ -11,6 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="120"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="180"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -20,28 +21,46 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Orientation="Vertical">
-            <TextBlock Text="Nome Completo:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtNome" Width="750" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBlock Text="Nome Completo:" FontSize="20" Margin="0 0 0 0"/>
+            <TextBox x:Name="txtNome" Width="800" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
 
             <TextBlock Text="Email:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtEmail" Width="750" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBox x:Name="txtEmail" Width="800" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
             
             <TextBlock Text="Endereço:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtEndereco" Width="500" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBox x:Name="txtEndereco" Width="1240" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
 
             <TextBlock Text="Telefone:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtTelefone" Width="500" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBox x:Name="txtTelefone" Width="650" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+
+            <TextBlock Text="Sexo:" FontSize="20" Margin="0 30 0 0"/>
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <RadioButton x:Name="rdbtFeminino" Content="Feminino" FontSize="15" Margin="0 0 0 0"/>
+                <RadioButton x:Name="rdbtMasculino" Content="Masculino" FontSize="15" Margin="50 0 0 0"/>
+            </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Orientation="Vertical">
-            <TextBlock Text="CPF:" FontSize="20"/>
-            <TextBox x:Name="txtCpf" Width="300" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Orientation="Vertical" Margin="0 0 60 0">
+            <TextBlock Text="CPF:" FontSize="20" Margin="110 0 0 0"/>
+            <TextBox x:Name="txtCpf" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
 
-            <TextBlock Text="RG:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtRg" Width="300" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBlock Text="RG:" FontSize="20" Margin="110 30 0 0"/>
+            <TextBox x:Name="txtRg" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
 
-            <TextBlock Text="Endereço:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtEndere" Width="500" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBlock Text="Data de Nascimento:" FontSize="20" Margin="0 123 0 0"/>
+            <DatePicker x:Name="dtpDataNascFuncionario" Background="White" Width="409" Padding="10" HorizontalAlignment="Left" Margin="0 10 0 0"/>
+
+            <TextBlock Text="Turno" FontSize="20" Margin="0 30 0 0"/>
+            <ComboBox Padding="10">
+                <ComboBoxItem Content="Manhã"/>
+                <ComboBoxItem Content="Tarde"/>
+                <ComboBoxItem Content="Noite"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <Button x:Name="btnSalvar" Content="Salvar" Padding="8" Width="109" Height="44" Cursor="Hand"/>
+            <Button x:Name="btnCancelar" Content="Cancelar" Padding="8" Width="109" Height="44" Cursor="Hand" Margin="50 0 0 0"/>
         </StackPanel>
     </Grid>
 </Window>

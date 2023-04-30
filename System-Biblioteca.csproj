@@ -126,6 +126,9 @@
     <Compile Include="Views\CadLivro.xaml.cs">
       <DependentUpon>CadLivro.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\SideNavBarFormWindow.xaml.cs">
+      <DependentUpon>SideNavBarFormWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Teste.xaml.cs">
       <DependentUpon>Teste.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadLivro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SideNavBarFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

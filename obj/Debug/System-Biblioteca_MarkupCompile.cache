@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debug\
+C:\Users\macha\OneDrive\Área de Trabalho\IFRO\projetos\ProjetoBiblioteca\obj\Debug\
 System_Biblioteca
 none
 false
 DEBUG;TRACE
-C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\App.xaml
+C:\Users\macha\OneDrive\Área de Trabalho\IFRO\projetos\ProjetoBiblioteca\App.xaml
 71394315340
 
 111393301642
-351681388771
+351129575093
 MainWindow.xaml;Views\CadAutor.xaml;Views\CadFornecedor.xaml;Views\CadFuncionario.xaml;Views\CadLeitor.xaml;Views\CadLivro.xaml;Views\Teste.xaml;
 
 False

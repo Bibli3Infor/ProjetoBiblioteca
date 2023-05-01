@@ -64,8 +64,26 @@
                         <PasswordBox x:Name="txtSenha" Width="250" Margin="0 10 0 0" Padding="8"/>
                     </StackPanel>
                 </StackPanel>
-                <Button x:Name="btnEntrar" Background="#FF4388CD" Content="ENTRAR" FontSize="15" Width="250" Height="44" Cursor="Hand" Margin="0 100 0 0" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <Button x:Name="btnCadastrar"  Content="cadastrar" FontSize="15" Cursor="Hand" Margin="14 70 0 0" FontWeight="Bold" HorizontalAlignment="Center" BorderBrush="#00707070" Background="#00DDDDDD" Click="btnCadastrar_Click"/>
+                <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FF4388CD"   Width="255" Height="44" Margin="0 100 0 0">
+                    <Button x:Name="btnEntrar"  Background="#FF4388CD" Content="ENTRAR" FontSize="15" Width="230" Height="35" Cursor="Hand"  FontWeight="Bold" HorizontalAlignment="Center" Click="btnEntrar_Click" BorderBrush="#00707070">
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Border>
+                <Button x:Name="btnCadastrar"  Content="cadastrar" FontSize="15" Cursor="Hand" Margin="14 70 0 0" FontWeight="Bold" HorizontalAlignment="Center" BorderBrush="#00707070" Background="#00DDDDDD" Click="btnCadastrar_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
 
 
 

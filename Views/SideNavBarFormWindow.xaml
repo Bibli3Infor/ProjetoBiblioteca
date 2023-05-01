@@ -13,25 +13,22 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0">
-            <StackPanel Margin="0 0 0 100">
-                <Border Margin="0, 20, 0, 0" Width="150" Height="150">
+            <StackPanel>
+                <Border Margin="0, 20, 0, 20" Width="180" Height="180">
                     <Border.Background>
                         <LinearGradientBrush>
-                            <GradientStop Color="#FF202025"/>
+                            <GradientStop Color="#FF3782CC"/>
                         </LinearGradientBrush>
                     </Border.Background>
                     <StackPanel>
-                        <Image x:Name="imgPerfil" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="150" Width="150"/>
-                        <StackPanel>
-                            <Button x:Name="btnInserirImg" Content="+ Upload new photo" Margin="0 0 0 10" Height="40" Width="180" BorderBrush="#FF2D2D3A" Background="{x:Null}" Cursor="Hand"/>
-                        </StackPanel>
+                        <Image x:Name="imgPerfil" HorizontalAlignment="Center" Margin="0,15,0,0" Height="150" Width="160" Source="/Views/avatar.jpg" />
                     </StackPanel>
                     <Border.Clip>
-                        <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,150,150"/>
+                        <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,180,180"/>
                     </Border.Clip>
                 </Border>
             </StackPanel>
-
+            
             <Button x:Name="btnCadLivro" Content="Cadastrar Livro" FontSize="15" Width="150" Height="40" Click="btnCadLivro_Click"/>
             <Button x:Name="btnCadLeitor" Content="Cadastrar Leitor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0" Click="btnCadLeitor_Click"/>
             <Button x:Name="btnCadAutor" Content="Cadastrar Autor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0" Click="btnCadAutor_Click"/>

@@ -24,5 +24,10 @@ namespace System_Biblioteca.Views.Pages
         {
             InitializeComponent();
         }
+
+        private void btnCancelarFun_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

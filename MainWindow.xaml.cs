@@ -28,6 +28,12 @@ namespace System_Biblioteca
 
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
+            CadFuncionario view = new CadFuncionario();
+            view.ShowDialog();
+        }
+
+        private void btnEntrar_Click(object sender, RoutedEventArgs e)
+        {
             SideNavBarFormWindow view = new SideNavBarFormWindow();
             view.ShowDialog();
         }

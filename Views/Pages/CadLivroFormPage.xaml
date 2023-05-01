@@ -41,21 +41,21 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Orientation="Vertical" Margin="0 0 60 0">
 
-            <StackPanel Margin="0 0 0 20">
-                <Border Margin="0, 20, 0, 0" Width="150" Height="150">
+            <StackPanel>
+                <Border Margin="200, 0, 0, 0" Width="300" Height="300">
                     <Border.Background>
                         <LinearGradientBrush>
-                            <GradientStop Color="#FF202025"/>
+                            <GradientStop Color="#FF3782CC"/>
                         </LinearGradientBrush>
                     </Border.Background>
                     <StackPanel>
-                        <Image x:Name="imgPerfil" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="150" Width="150"/>
+                        <Image x:Name="imgPerfil" HorizontalAlignment="Center" Margin="0,30,0,0" Height="200" Width="205" Source="/Views/avatar.jpg" />
                         <StackPanel>
-                            <Button x:Name="btnInserirImg" Content="+ Upload new photo" Margin="0 0 0 10" Height="40" Width="180" BorderBrush="#FF2D2D3A" Background="Green" Cursor="Hand"/>
+                            <Button x:Name="btnInserirImg" Content="IMAGEM" Margin="0 10 0 10" Height="40" Width="205" BorderBrush="#FF4E4EC7"  Background="{x:Null}" Cursor="Hand" Click="btnInserirImg_Click" Foreground="White"/>
                         </StackPanel>
                     </StackPanel>
                     <Border.Clip>
-                        <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,150,150"/>
+                        <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,300,300"/>
                     </Border.Clip>
                 </Border>
             </StackPanel>
@@ -68,8 +68,28 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 30">
-            <Button x:Name="btnCancelarLivro" Content="Cancelar" FontSize="15" Padding="8" Width="109" Height="44" Cursor="Hand" Background="#FF003DFF" FontWeight="Bold"/>
-            <Button x:Name="btnSalvarLivro" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="109" Height="44" Margin="50 0 60 0" Cursor="Hand" FontWeight="Bold"/>
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FFCE1919"  Width="109" Height="44" >
+                <Button x:Name="btnCancelarFun" Content="Cancelar" FontSize="15" Padding="8" Width="90" Cursor="Hand" Background="#FFCE1919" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Margin="10,2,9,0" Click="btnCancelarFun_Click" Height="40" VerticalAlignment="Top">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FF00E800"  Width="109" Height="44" Margin="50 0 60 0">
+                <Button x:Name="btnSalvarFun" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="90" Height="40"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Foreground="White">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
         </StackPanel>
     </Grid>
 </Page>

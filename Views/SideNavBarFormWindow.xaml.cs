@@ -23,12 +23,12 @@ namespace System_Biblioteca.Views
         public SideNavBarFormWindow()
         {
             InitializeComponent();
-            //fraPages.Content = new 
+            //fraPages.Content = new SideNavBarFormWindow();
         }
 
         private void btnCadLivro_Click(object sender, RoutedEventArgs e)
         {
-            fraPages.Content = new CadLivroFormPage();
+            fraPages.Content = new CadLivroFormPage(/*fraPages*/);
         }
 
         private void btnCadLeitor_Click(object sender, RoutedEventArgs e)
@@ -44,6 +44,42 @@ namespace System_Biblioteca.Views
         private void btnCadFornecedor_Click(object sender, RoutedEventArgs e)
         {
             fraPages.Content = new CadFornecedorFormPage();
+        }
+
+        private void btnGenLeitor_Click(object sender, RoutedEventArgs e)
+        {
+            fraPages.Content = new GenLeitorFormPage();
+        }
+
+        private void btnGenAcervo_Click(object sender, RoutedEventArgs e)
+        {
+            fraPages.Content = new GenAcervoFormPaage(/*fraPages*/);
+            //fraPages.Content = new GenAcervoFormPaage(fraPages);
+        }
+
+        private void btnDevolucao_Click(object sender, RoutedEventArgs e)
+        {
+            fraPages.Content = new DevolucaoLivroFormPage();
+        }
+
+        private void btnCadFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            fraPages.Content = new CadFuncionarioFormPage();
+        }
+
+        private void btnLivrosPendentes_Click(object sender, RoutedEventArgs e)
+        {
+            fraPages.Content = new AlugarLivroFormPage();
+        }
+
+        private void btnFavoritos_Click(object sender, RoutedEventArgs e)
+        {
+            fraPages.Content = new FavoritosFormPage();
+        }
+
+        private void btnGenFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            fraPages.Content = new GenFuncionarioFormPage();
         }
     }
 }

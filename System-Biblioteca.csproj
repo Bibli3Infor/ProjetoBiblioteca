@@ -114,17 +114,38 @@
     <Compile Include="Views\CadFuncionario.xaml.cs">
       <DependentUpon>CadFuncionario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\AlugarLivroFormPage.xaml.cs">
+      <DependentUpon>AlugarLivroFormPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\CadAutorFormPage.xaml.cs">
       <DependentUpon>CadAutorFormPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\CadFornecedorFormPage.xaml.cs">
       <DependentUpon>CadFornecedorFormPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\CadFuncionarioFormPage.xaml.cs">
+      <DependentUpon>CadFuncionarioFormPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\CadLeitorFormPage.xaml.cs">
       <DependentUpon>CadLeitorFormPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\CadLivroFormPage.xaml.cs">
       <DependentUpon>CadLivroFormPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\DevolucaoLivroFormPage.xaml.cs">
+      <DependentUpon>DevolucaoLivroFormPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\FavoritosFormPage.xaml.cs">
+      <DependentUpon>FavoritosFormPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\GenAcervoFormPaage.xaml.cs">
+      <DependentUpon>GenAcervoFormPaage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\GenFuncionarioFormPage.xaml.cs">
+      <DependentUpon>GenFuncionarioFormPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\GenLeitorFormPage.xaml.cs">
+      <DependentUpon>GenLeitorFormPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SideNavBarFormWindow.xaml.cs">
       <DependentUpon>SideNavBarFormWindow.xaml</DependentUpon>
@@ -145,6 +166,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Pages\AlugarLivroFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Pages\CadAutorFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -153,11 +178,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Pages\CadFuncionarioFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Pages\CadLeitorFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\CadLivroFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\DevolucaoLivroFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\FavoritosFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\GenAcervoFormPaage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\GenFuncionarioFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\GenLeitorFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -207,6 +256,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Pages\pesquisar icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Pages\favorito.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets')" />

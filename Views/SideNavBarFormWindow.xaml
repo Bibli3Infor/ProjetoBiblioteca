@@ -28,12 +28,41 @@
                     </Border.Clip>
                 </Border>
             </StackPanel>
-            
-            <Button x:Name="btnCadLivro" Content="Cadastrar Livro" FontSize="15" Width="150" Height="40" Click="btnCadLivro_Click"/>
-            <Button x:Name="btnCadLeitor" Content="Cadastrar Leitor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0" Click="btnCadLeitor_Click"/>
-            <Button x:Name="btnCadAutor" Content="Cadastrar Autor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0" Click="btnCadAutor_Click"/>
-            <Button x:Name="btnCadFornecedor" Content="Cadastrar Fornecedor" FontSize="15" Width="150" Height="40" Margin="0 20 0 0" Click="btnCadFornecedor_Click"/>
-            <Button x:Name="btnCadFuncionario" Content="Cadastrar Funcionário" FontSize="15" Width="150" Height="40" Margin="0 20 0 0"/>
+            <StackPanel>
+                <StackPanel Margin="0 10 0 15" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Label Content="Cadastros" Margin="0 0 10 0" FontFamily="Bahnschrift" FontWeight="Bold" FontSize="16"/>
+                    <Rectangle Width="78" Height="2" Fill="Black"/>
+                </StackPanel>
+                <Button x:Name="btnCadLivro" Content="Cadastrar Livro" FontSize="16" Width="167" Height="35" Click="btnCadLivro_Click" FontFamily="Bahnschrift"/>
+                <Button x:Name="btnCadLeitor" Content="Cadastrar Leitor" FontSize="16" Width="167" Height="35" Margin="0 20 0 0" Click="btnCadLeitor_Click" FontFamily="Bahnschrift"/>
+                <Button x:Name="btnCadAutor" Content="Cadastrar Autor" FontSize="16" Width="167" Height="35" Margin="0 20 0 0" Click="btnCadAutor_Click" FontFamily="Bahnschrift"/>
+                <Button x:Name="btnCadFornecedor" Content="Cadastrar Fornecedor" FontSize="16" Width="167" Height="35" Margin="0 20 0 0" Click="btnCadFornecedor_Click" FontFamily="Bahnschrift"/>
+                <Button x:Name="btnCadFuncionario" Content="Cadastrar Funcionário" FontSize="16" Width="167" Height="35" Margin="0 20 0 0" Click="btnCadFuncionario_Click" FontFamily="Bahnschrift"/>
+            </StackPanel>
+
+            <StackPanel>
+                <StackPanel Margin="0 10 0 15" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Label Content="Gererciamento" Margin="0 0 5 0" FontFamily="Bahnschrift" FontWeight="Bold" FontSize="16" Width="116"/>
+                    <Rectangle Width="78" Height="2" Fill="Black"/>
+                </StackPanel>
+
+                <Button x:Name="btnGenLeitor" Content="Gerenciar Leitor" FontSize="16" Width="167" Height="35" Click="btnGenLeitor_Click" FontFamily="Bahnschrift"/>
+                <Button x:Name="btnGenFuncionario" Content="Gerenciar Funcionario" FontSize="16" Width="167" Height="35" Margin="0 20 0 0" FontFamily="Bahnschrift" Click="btnGenFuncionario_Click"/>
+                <Button x:Name="btnGenAcervo" Content="Gerenciar Acervo" FontSize="16" Width="167" Height="35" Margin="0 20 0 0" Click="btnGenAcervo_Click" FontFamily="Bahnschrift"/>
+            </StackPanel>
+
+            <StackPanel>
+                <StackPanel Margin="0 10 0 15" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Label Content="Ações" Margin="0 0 5 0" FontFamily="Bahnschrift" FontWeight="Bold" FontSize="16" Width="65"/>
+                    <Rectangle Width="78" Height="2" Fill="Black"/>
+                </StackPanel>
+
+                <Button x:Name="btnLivrosPendentes" Content="Alugar Livro" FontSize="16" Width="167" Height="35" FontFamily="Bahnschrift" Click="btnLivrosPendentes_Click"/>
+                <Button x:Name="btnDevolucao" Content="Devolução de Livro" FontSize="16" Width="167" Height="35" Margin="0 20 0 0" Click="btnDevolucao_Click" FontFamily="Bahnschrift"/>
+                <Button x:Name="btnFavoritos" Content="Favoritos" FontSize="16" Width="167" Height="35" Margin="0 20 0 0" FontFamily="Bahnschrift" Click="btnFavoritos_Click"/>
+            </StackPanel>
+
+
         </StackPanel>
 
         <StackPanel Grid.Column="1" Background="Aqua">

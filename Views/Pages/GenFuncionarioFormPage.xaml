@@ -1,0 +1,143 @@
+﻿<Page x:Class="System_Biblioteca.Views.Pages.GenFuncionarioFormPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:System_Biblioteca.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1050" d:DesignWidth="1920"
+      Title="GenFuncionarioFormPage">
+
+    <Grid Background="Aqua">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="180"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+
+                <StackPanel VerticalAlignment="Center" Margin="0 0 0 50">
+                    <TextBlock Text="Pesquisar Funcionario:" FontSize="20" Margin="0 0 0 0" FontWeight="Normal"/>
+                    <ComboBox x:Name="cbmLeitor" Width="857" Height="40" HorizontalAlignment="Left"/>
+                </StackPanel>
+
+                <StackPanel VerticalAlignment="Center" Margin="0 -20 0 0">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20"  Width="70" Height="70" Margin="50 0 60 0" Background="White">
+                        <Button x:Name="btnPesquisar"  FontSize="15" Padding="8" Width="60" Height="60"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Margin="0 0 0 0" Foreground="White">
+                            <Button.Background>
+                                <ImageBrush ImageSource="/Views/Pages/pesquisar icon.png"/>
+                            </Button.Background>
+                            <Button.Template>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Nome Completo:" FontSize="20" Margin="0 0 0 0"/>
+                    <TextBox x:Name="txtNome" Width="600" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10 0 0 0">
+                    <TextBlock Text="CPF:" FontSize="20" Margin="0 0 0 0"/>
+                    <TextBox x:Name="txtCpf" Width="250" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Email:" FontSize="20" Margin="0 30 0 0"/>
+                    <TextBox x:Name="txtEmail" Width="600" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="10 0 0 0">
+                    <TextBlock Text="RG:" FontSize="20" Margin="0 30 0 0"/>
+                    <TextBox x:Name="txtRg" Width="250" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+                </StackPanel>
+            </StackPanel>
+
+
+            <TextBlock Text="Endereço:" FontSize="20" Margin="0 30 0 0"/>
+            <TextBox x:Name="txtEndereco" Width="860" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+
+            <TextBlock Text="Telefone:" FontSize="20" Margin="0 30 0 0"/>
+            <TextBox x:Name="txtTelefone" Width="650" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+
+            <TextBlock Text="Sexo:" FontSize="20" Margin="0 30 0 0"/>
+            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+                <RadioButton x:Name="rdbtFeminino" Content="Feminino" FontSize="15" Margin="0 0 0 0" FontWeight="Bold" IsEnabled="False"/>
+                <RadioButton x:Name="rdbtMasculino" Content="Masculino" FontSize="15" Margin="50 0 0 0" FontWeight="Bold" IsEnabled="False"/>
+            </StackPanel>
+            
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Orientation="Vertical" Margin="0 0 60 0">
+            <StackPanel>
+                <Border Margin="200, 0, 0, 0" Width="300" Height="300">
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#FF3782CC"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <StackPanel>
+                        <Image x:Name="imgPerfil" HorizontalAlignment="Center" Margin="0,30,0,0" Height="200" Width="205" Source="/Views/avatar.jpg" />
+                        <StackPanel>
+                            <Button x:Name="btnInserirImg" Content="IMAGEM" Margin="0 10 0 10" Height="40" Width="205" BorderBrush="#FF4E4EC7"  Background="{x:Null}" Cursor="Hand" Foreground="White"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,300,300"/>
+                    </Border.Clip>
+                </Border>
+            </StackPanel>
+
+            <TextBlock Text="Data de Nascimento:" FontSize="20" Margin="0 0 0 0"/>
+            <DatePicker x:Name="dtpDataNascFuncionario" Background="White" Width="409" Padding="10" HorizontalAlignment="Left" Margin="0 10 0 0" IsEnabled="False"/>
+
+            <TextBlock Text="Turno" FontSize="20" Margin="0 30 90 0" Width="409"/>
+            <ComboBox Padding="10" Width="409" Margin="0 0 90 0" IsEnabled="False" >
+                <ComboBoxItem Content="Manhã"/>
+                <ComboBoxItem Content="Tarde"/>
+                <ComboBoxItem Content="Noite"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FFCE1919"  Width="109" Height="44" >
+                <Button x:Name="btnExcluirFun" Content="Excluir" FontSize="15" Padding="8" Width="90" Cursor="Hand" Background="#FFCE1919" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Margin="10,2,9,2">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FF00E800"  Width="109" Height="44" Margin="50 0 60 0">
+                <Button x:Name="btnSalvarFun" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="90" Height="40"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Foreground="White">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

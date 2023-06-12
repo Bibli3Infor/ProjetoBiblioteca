@@ -22,10 +22,21 @@ namespace System_Biblioteca.Views.Pages
     /// </summary>
     public partial class CadLivroFormPage : Page
     {
-        public CadLivroFormPage()
+        //private Livro _livro = new Livro();
+        private Frame fraPaginas;
+
+        public CadLivroFormPage(/*Frame _frame*/)
         {
             InitializeComponent();
+            //fraPaginas = _frame;
         }
+        /*
+        public CadLivroFormPage(Livro livro, Frame _frame)
+        {
+            InitializeComponent();
+            fraPaginas = _frame;
+            _livro = livro;
+        }*/
 
         private void btnInserirImg_Click(object sender, RoutedEventArgs e)
         {

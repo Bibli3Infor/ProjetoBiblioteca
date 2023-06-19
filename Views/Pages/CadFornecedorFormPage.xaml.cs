@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System_Biblioteca.Models;
 
 namespace System_Biblioteca.Views.Pages
 {
@@ -20,6 +21,9 @@ namespace System_Biblioteca.Views.Pages
     /// </summary>
     public partial class CadFornecedorFormPage : Page
     {
+
+        private Fornecedor _fornecedor = new Fornecedor();
+
         public CadFornecedorFormPage()
         {
             InitializeComponent();
@@ -27,6 +31,29 @@ namespace System_Biblioteca.Views.Pages
 
         private void btnCancelarFun_Click(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void btnSalvarFornecedor_Click(object sender, RoutedEventArgs e)
+        {
+            _fornecedor.NomeEmpresa = txtNomeEmpresa.Text;
+            _fornecedor.Telefone = txtTelefoneEmpresa.Text;
+            _fornecedor.Email = txtEmailEmpresa.Text;
+            _fornecedor.Cnpj = txtCnpjEmpresa.Text;
+            _fornecedor.Endereco = txtEnderecoEmpresa.Text;
+            _fornecedor.Descricao = txtDescEmpresa.Text;
+            _fornecedor.RazaoSocial = txtRazaoEmpresa.Text;
+
+            try
+            {
+                var dao = new FornecedorDAO();
+
+                dao.Insert(_fornecedor);
+                MessageBox.Show("Registro Salvo com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

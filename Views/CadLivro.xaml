@@ -1,0 +1,56 @@
+﻿<Window x:Class="System_Biblioteca.Views.CadLivro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:System_Biblioteca.Views"
+        mc:Ignorable="d"
+        Title="CadLivro" Height="1080" Width="1920" WindowState="Maximized" Padding="0,0,0,0" Margin="4,0,0,0" ToolBar.OverflowMode="AsNeeded">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="180"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Orientation="Vertical">
+            <TextBlock Text="Título:" FontSize="20" Margin="0 0 0 0"/>
+            <TextBox x:Name="txtTituloLivro" Width="800" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+
+            <TextBlock Text="Autor:" FontSize="20" Margin="0 30 0 0"/>
+            <TextBox x:Name="txtAutorLivro" Width="800" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+
+            <TextBlock Text="Localização:" FontSize="20" Margin="0 30 0 0"/>
+            <TextBox x:Name="txtLocalLivro" Width="800" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+
+            <TextBlock Text="Sinopse:" FontSize="20" Margin="0 30 0 0"/>
+            <TextBox x:Name="txtSinopiseLivro" Width="1240" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" Height="119"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Orientation="Vertical" Margin="0 0 60 0">
+            
+            
+            
+            <TextBlock Text="Código:" FontSize="20" Margin="110 0 0 0"/>
+            <TextBox x:Name="txtCodLivro" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
+
+            <TextBlock Text="Data de Nascimento:" FontSize="20" Margin="0 30 0 0"/>
+            <DatePicker x:Name="dtpDataNascLei" Background="White" Width="300" Padding="10" HorizontalAlignment="Left" Margin="0 10 0 0"/>
+
+            <TextBlock Text="Edição:" FontSize="20" Margin="110 30 0 0"/>
+            <TextBox x:Name="txtCodAcessLei" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="btnCancelarLivro" Content="Cancelar" FontSize="15" Padding="8" Width="109" Height="44" Cursor="Hand" Background="#FF003DFF" FontWeight="Bold"/>
+            <Button x:Name="btnSalvarLivro" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="109" Height="44" Margin="50 0 60 0" Cursor="Hand" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -35,7 +35,7 @@
             <TextBox x:Name="txtLocalLivro" Width="700" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
 
             <TextBlock Text="Sinopse:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtSinopiseLivro" Width="1040" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" Height="119"/>
+            <TextBox x:Name="txtSinopiseLivro" Width="706" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" Height="119"/>
 
         </StackPanel>
 
@@ -67,7 +67,7 @@
             <TextBox x:Name="txtCodALivro" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8" Height="116"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 30">
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 80">
             <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FFCE1919"  Width="109" Height="44" >
                 <Button x:Name="btnCancelarFun" Content="Cancelar" FontSize="15" Padding="8" Width="90" Cursor="Hand" Background="#FFCE1919" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Margin="10,2,9,0" Click="btnCancelarFun_Click" Height="40" VerticalAlignment="Top">
                     <Button.Template>

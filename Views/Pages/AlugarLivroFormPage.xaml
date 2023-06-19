@@ -10,7 +10,7 @@
 
     <Grid Background="Aqua">
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
@@ -51,7 +51,7 @@
 
                 </StackPanel>
                 <Label Content="Livros Disponíveis" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold"/>
-                <DataGrid Width="928" Height="300">
+                <DataGrid Width="928" Height="265">
 
                 </DataGrid>
 
@@ -82,7 +82,7 @@
                 </StackPanel>
 
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 40 0 0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
                     <StackPanel>
                         <Label Content="Data de Vigência:" FontSize="18"/>
                         <DatePicker x:Name="dtpDataVigencia" Width="200" Height="45" Padding="12" Background="White"/>

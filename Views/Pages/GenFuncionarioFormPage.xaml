@@ -10,9 +10,9 @@
 
     <Grid Background="Aqua">
         <Grid.RowDefinitions>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="180"/>
+            <RowDefinition Height="300"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -24,9 +24,9 @@
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
 
-                <StackPanel VerticalAlignment="Center" Margin="0 0 0 50">
+                <StackPanel VerticalAlignment="Center" Margin="0 0 0 30">
                     <TextBlock Text="Pesquisar Funcionario:" FontSize="20" Margin="0 0 0 0" FontWeight="Normal"/>
-                    <ComboBox x:Name="cbmLeitor" Width="857" Height="40" HorizontalAlignment="Left"/>
+                    <ComboBox x:Name="cbmLeitor" Width="627" Height="40" HorizontalAlignment="Left"/>
                 </StackPanel>
 
                 <StackPanel VerticalAlignment="Center" Margin="0 -20 0 0">
@@ -51,7 +51,7 @@
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="Nome Completo:" FontSize="20" Margin="0 0 0 0"/>
-                    <TextBox x:Name="txtNome" Width="600" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+                    <TextBox x:Name="txtNome" Width="499" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="10 0 0 0">
                     <TextBlock Text="CPF:" FontSize="20" Margin="0 0 0 0"/>
@@ -61,7 +61,7 @@
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="Email:" FontSize="20" Margin="0 30 0 0"/>
-                    <TextBox x:Name="txtEmail" Width="600" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+                    <TextBox x:Name="txtEmail" Width="499" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="10 0 0 0">
                     <TextBlock Text="RG:" FontSize="20" Margin="0 30 0 0"/>
@@ -71,10 +71,10 @@
 
 
             <TextBlock Text="Endereço:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtEndereco" Width="860" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+            <TextBox x:Name="txtEndereco" Width="499" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False" Height="65"/>
 
             <TextBlock Text="Telefone:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtTelefone" Width="650" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
+            <TextBox x:Name="txtTelefone" Width="499" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" IsEnabled="False"/>
 
             <TextBlock Text="Sexo:" FontSize="20" Margin="0 30 0 0"/>
             <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
@@ -86,36 +86,36 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Orientation="Vertical" Margin="0 0 60 0">
             <StackPanel>
-                <Border Margin="200, 0, 0, 0" Width="300" Height="300">
+                <Border Margin="200, 0, 0, 0" Width="200" Height="200">
                     <Border.Background>
                         <LinearGradientBrush>
                             <GradientStop Color="#FF3782CC"/>
                         </LinearGradientBrush>
                     </Border.Background>
                     <StackPanel>
-                        <Image x:Name="imgPerfil" HorizontalAlignment="Center" Margin="0,30,0,0" Height="200" Width="205" Source="/Views/avatar.jpg" />
+                        <Image x:Name="imgPerfil" HorizontalAlignment="Center" Margin="0,30,0,0" Height="120" Width="120" Source="/Views/avatar.jpg" />
                         <StackPanel>
-                            <Button x:Name="btnInserirImg" Content="IMAGEM" Margin="0 10 0 10" Height="40" Width="205" BorderBrush="#FF4E4EC7"  Background="{x:Null}" Cursor="Hand" Foreground="White"/>
+                            <Button x:Name="btnInserirImg" Content="IMAGEM" Margin="0 10 0 10" Height="30" Width="110" BorderBrush="#FF4E4EC7"  Background="{x:Null}" Cursor="Hand" Foreground="White"/>
                         </StackPanel>
                     </StackPanel>
                     <Border.Clip>
-                        <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,300,300"/>
+                        <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,200,200"/>
                     </Border.Clip>
                 </Border>
             </StackPanel>
 
-            <TextBlock Text="Data de Nascimento:" FontSize="20" Margin="0 0 0 0"/>
-            <DatePicker x:Name="dtpDataNascFuncionario" Background="White" Width="409" Padding="10" HorizontalAlignment="Left" Margin="0 10 0 0" IsEnabled="False"/>
+            <TextBlock Text="Data de Nascimento:" FontSize="20" Margin="0 100 0 0" Width="316"/>
+            <DatePicker x:Name="dtpDataNascFuncionario" Background="White" Width="363" Padding="10" HorizontalAlignment="Right" Margin="0 10 0 0" IsEnabled="False"/>
 
-            <TextBlock Text="Turno" FontSize="20" Margin="0 30 90 0" Width="409"/>
-            <ComboBox Padding="10" Width="409" Margin="0 0 90 0" IsEnabled="False" >
+            <TextBlock Text="Turno" FontSize="20" Margin="0 65 90 0" Width="227"/>
+            <ComboBox Padding="10" Width="359" HorizontalAlignment="Right" Margin="0 0 0 0" IsEnabled="False" >
                 <ComboBoxItem Content="Manhã"/>
                 <ComboBoxItem Content="Tarde"/>
                 <ComboBoxItem Content="Noite"/>
             </ComboBox>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 200">
             <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FFCE1919"  Width="109" Height="44" >
                 <Button x:Name="btnExcluirFun" Content="Excluir" FontSize="15" Padding="8" Width="90" Cursor="Hand" Background="#FFCE1919" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Margin="10,2,9,2">
                     <Button.Template>

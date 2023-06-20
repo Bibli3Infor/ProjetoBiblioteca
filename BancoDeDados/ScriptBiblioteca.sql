@@ -8,12 +8,11 @@ create table Funcionario(
     cpf_fun varchar(100),
     rg_fun varchar(50),
     endereco_fun varchar(50),
-    codigo_acesso_fun varchar(100),
+    #codigo_acesso_fun varchar(100),
     telefone_fun varchar(100),
     turno_fun varchar(100),
     sexo_fun varchar(80),
-    data_nasc_fun date,
-    foto_fun blob
+    data_nasc_fun date
 );
 
 create table Leitor(
@@ -73,12 +72,30 @@ create table Vaga(
 	foreign key (id_fun_fk) references Funcionario (id_fun)
 );
 
+create table Livro(
+	id_liv int primary key auto_increment,
+	codigo_liv varchar(200),
+    titulo_liv varchar(300),
+    sinopse_liv varchar(500),
+    localizacao_liv varchar(300),
+	data_publicacao_liv date,
+    edicao_liv varchar(300)
+	#int_for_fk int not null,
+	#foreign key (int_for_fk) references Fornecedor (id_for),
+	#int_aut_fk int not null,
+	#foreign key (int_aut_fk) references Autor (id_aut)
+	#int_gen_fk int not null,
+	#foreign key (int_aut_fk) references Genero (id_gen)
+);
+
 create table Emprestimo(
 	id_emp int primary key auto_increment,
     data_emp date,
     situacao_emp varchar(300),
-	id_fun_fk int,
-	foreign key (id_fun_fk) references Funcionario (id_fun),
+	#id_fun_fk int,
+	#foreign key (id_fun_fk) references Funcionario (id_fun),
+    id_liv_fk int,
+	foreign key (id_liv_fk) references Livro (id_liv),
 	id_lei_fk int,
 	foreign key (id_lei_fk) references Leitor (id_lei)
 );
@@ -89,25 +106,6 @@ create table Devolucao(
     atraso_dev date,
 	id_emp_fk int,
 	foreign key (id_emp_fk) references Emprestimo (id_emp)
-);
-
-create table Livro(
-	id_liv int primary key auto_increment,
-	codigo_liv varchar(200),
-    titulo_liv varchar(300),
-    sinopse_liv varchar(500),
-    localizacao_liv varchar(300),
-	data_publicacao_liv date,
-    edicao_liv varchar(300),
-    foto_liv blob,
-	int_for_fk int not null,
-	foreign key (int_for_fk) references Fornecedor (id_for),
-    int_emp_fk int not null,
-	foreign key (int_emp_fk) references Emprestimo (id_emp),
-	int_aut_fk int not null,
-	foreign key (int_aut_fk) references Autor (id_aut),
-	int_gen_fk int not null,
-	foreign key (int_aut_fk) references Genero (id_gen)
 );
 
 create table Favoritos(

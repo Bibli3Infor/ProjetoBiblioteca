@@ -116,3 +116,14 @@ create table Favoritos(
 	id_lei_fk int,
 	foreign key (id_lei_fk) references Leitor (id_lei)
 );
+
+insert into Livro values (null, null, "Alice no Pais das Maravilhas", null, null, null, "3º Edicao");
+insert into Livro values (null, null, "A volta ao mundo em 80 dias", null, null, null, "15º Edicao");
+insert into Livro values (null, null, "Memórias Póstumas de Bras Cubas", null, null, null, "10º Edicao");
+insert into Livro values (null, null, "O Alienista", null, null, null, "7º Edicao");
+insert into Livro values (null, null, "Contos de Grin", null, null, null, "2º Edicao");
+insert into Livro values (null, null, "Sangue Azul", null, null, null, "8º Edicao");
+
+insert into Funcionario values (null, "Danilo Bento Rezende", "danilobentorezende@bol.br", "276.450.669-46", "24.396.517-5", "Rua Princesa Isabel", "(82) 2676-8224", "Matutino", "Masculino", '1999-05-20');
+insert into Funcionario values (null, "Isabel Daniela Antônia Rezende", "isabel.daniela.rezende@brastek.com.br", "276.450.669-46", "24.396.517-5", "Rua Nossa Senhora da Luz", "(86) 2764-8041", "Vespertino", "Feminino", '1995-03-18');
+insert into Funcionario values (null, "Elza Laís Hadassa Martins", "delza_lais_martins@gdsambiental.com.br", "724.233.947-21", "18.105.905-8", "Rua Vera Cruz", "(73) 3903-1494", "Matutino", "Masculino", '1999-05-20');

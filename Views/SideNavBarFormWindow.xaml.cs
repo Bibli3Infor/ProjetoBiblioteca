@@ -28,7 +28,7 @@ namespace System_Biblioteca.Views
 
         private void btnCadLivro_Click(object sender, RoutedEventArgs e)
         {
-            fraPages.Content = new CadLivroFormPage(/*fraPages*/);
+            fraPages.Content = new CadLivroFormPage();
         }
 
         private void btnCadLeitor_Click(object sender, RoutedEventArgs e)
@@ -53,7 +53,7 @@ namespace System_Biblioteca.Views
 
         private void btnGenAcervo_Click(object sender, RoutedEventArgs e)
         {
-            fraPages.Content = new GenAcervoFormPaage(/*fraPages*/);
+            fraPages.Content = new GenAcervoFormPaage();
             //fraPages.Content = new GenAcervoFormPaage(fraPages);
         }
 

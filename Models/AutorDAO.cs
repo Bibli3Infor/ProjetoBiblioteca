@@ -42,5 +42,40 @@ namespace System_Biblioteca.Models
                 throw ex;
             }
         }
+
+        public List<Autor> List()
+        {
+            try
+            {
+                var lista = new List<Autor>();
+                var comando = _conn.Query();
+
+                comando.CommandText = "SELECT * FROM Autor";
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var autor = new Autor();
+
+                    autor.Id = reader.GetInt32("id_aut");
+                    autor.NomeAutor = DAOHelper.GetString(reader, "codigo_liv");
+                    autor.NacionalidadeAutor = DAOHelper.GetString(reader, "titulo_liv");
+                    autor.EmailAutor = DAOHelper.GetString(reader, "sinopse_liv");
+                    autor._sexo = DAOHelper.GetString(reader, "localizacao_liv");
+                    
+                    
+
+                    lista.Add(autor);
+
+                }
+                reader.Close();
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

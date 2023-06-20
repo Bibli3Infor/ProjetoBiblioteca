@@ -56,5 +56,20 @@ namespace System_Biblioteca.Views.Pages
             //_frame.Content = new CadLivroFormPage(livroSelected, _frame);
             
         }
+
+        private void btnListaFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnListaFornecedor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnListaAutores_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

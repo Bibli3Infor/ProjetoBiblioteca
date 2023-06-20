@@ -16,17 +16,16 @@ using System_Biblioteca.Models;
 namespace System_Biblioteca.Views
 {
     /// <summary>
-    /// Lógica interna para ListLivroFormWindow.xaml
+    /// Lógica interna para ListFuncionarioFormWindow.xaml
     /// </summary>
-    public partial class ListLivroFormWindow : Window
+    public partial class ListFuncionarioFormWindow : Window
     {
-        public ListLivroFormWindow()
+        public ListFuncionarioFormWindow()
         {
-            InitializeComponent();
-            Loaded += ListLivroFormWindow_Loaded;
+            Loaded += ListFuncionarioFormWindow_Loaded;
         }
 
-        private void ListLivroFormWindow_Loaded(object sender, RoutedEventArgs e)
+        private void ListFuncionarioFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
             CarregarListagem();
         }

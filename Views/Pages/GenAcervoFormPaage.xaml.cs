@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System_Biblioteca.Models;
 
 namespace System_Biblioteca.Views.Pages
 {
@@ -25,6 +26,27 @@ namespace System_Biblioteca.Views.Pages
         public GenAcervoFormPaage(/*Frame fraPages*/)
         {
             InitializeComponent();
+            Loaded += ListLivroFormPage_Loaded;
+        }
+
+        private void ListLivroFormPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new LivroDAO();
+                List<Livro> listaLivros = dao.List();
+
+                dataGridLivros.ItemsSource = listaLivros;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnEditarLivro_Click(object sender, RoutedEventArgs e)

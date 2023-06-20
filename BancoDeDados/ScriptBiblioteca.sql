@@ -18,13 +18,15 @@ create table Funcionario(
 
 create table Leitor(
 	id_lei int primary key auto_increment,
+    cod_acesso_lei varchar(300),
     nome_lei varchar(300),
     email_lei varchar(300),
     endereco_lei varchar(200),
     cpf_lei varchar(100),
     rg_lei varchar(50),
     telefone_lei varchar(200),
-    sexo_lei varchar(50)
+    sexo_lei varchar(50),
+    data_nasc_lei date
 );
 
 create table Genero(
@@ -48,6 +50,9 @@ create table Autor(
 	id_aut int primary key auto_increment,
     nome_aut varchar(300),
     nacionalidade_aut varchar(300),
+    email_aut varchar(300),
+    sexo_aut varchar(50),
+    contato_aut varchar(100),
     data_nasc_aut date
 );
 

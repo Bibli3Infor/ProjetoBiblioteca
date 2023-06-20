@@ -139,5 +139,19 @@
                 </Button>
             </Border>
         </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 200">
+            <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FFBD9494"  Width="199" Height="60" >
+                <Button x:Name="btnListaFuncionario" Content="Lista de Funcionarios" FontSize="15" Padding="8" Width="150" Cursor="Hand" Background="#FFBD9494" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Margin="10,2,9,2" Click="btnListaFuncionario_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>

@@ -26,26 +26,26 @@
             <TextBox x:Name="txtNomeAutor" Width="700" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
 
             <TextBlock Text="Email:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtEmailLei" Width="700" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBox x:Name="txtEmailAutor" Width="700" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
 
 
-            <TextBlock Text="Telefone:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtTelefoneLei" Width="550" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBlock FontSize="20" Margin="0 30 0 0"><Run Language="pt-br" Text="Contato"/><Run Text=":"/></TextBlock>
+            <TextBox x:Name="txtContatoAutor" Width="550" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
 
             <TextBlock Text="Sexo:" FontSize="20" Margin="0 30 0 0"/>
             <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                <RadioButton x:Name="rdbtFemininoLei" Content="Feminino" FontSize="15" Margin="0 0 0 0"/>
-                <RadioButton x:Name="rdbtMasculinoLei" Content="Masculino" FontSize="15" Margin="50 0 0 0"/>
+                <RadioButton x:Name="rdbtFemininoAutor" Content="Feminino" FontSize="15" Margin="0 0 0 0"/>
+                <RadioButton x:Name="rdbtMasculinoAutor" Content="Masculino" FontSize="15" Margin="50 0 0 0"/>
             </StackPanel>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Orientation="Vertical" Margin="0 0 60 0">
 
             <TextBlock Text="Nacionalidade" FontSize="20" Margin="110 0 0 0"/>
-            <TextBox x:Name="txtCodAcessLei" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
+            <TextBox x:Name="txtNacionalidadeAutor" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
 
             <TextBlock Text="Data de Nascimento:" FontSize="20" Margin="0 30 0 0"/>
-            <DatePicker x:Name="dtpDataNascLei" Background="White" Width="300" Padding="10" HorizontalAlignment="Left" Margin="0 10 0 0"/>
+            <DatePicker x:Name="dtpDataNascAutor" Background="White" Width="300" Padding="10" HorizontalAlignment="Left" Margin="0 10 0 0"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
@@ -61,7 +61,7 @@
                 </Button>
             </Border>
             <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FF00E800"  Width="109" Height="44" Margin="50 0 60 0">
-                <Button x:Name="btnSalvarFun" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="90" Height="40"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Foreground="White">
+                <Button x:Name="btnSalvarAutor" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="90" Height="40"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Click="btnSalvarAutor_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">

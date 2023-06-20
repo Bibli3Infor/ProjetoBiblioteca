@@ -140,3 +140,8 @@ C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debu
 C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debug\Views\Pages\FavoritosFormPage.baml
 C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debug\Views\Pages\GenFuncionarioFormPage.g.cs
 C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debug\Views\Pages\GenFuncionarioFormPage.baml
+C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debug\Views\ListLivroFormWindow.g.cs
+C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debug\Views\ListLivroFormWindow.baml
+C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debug\App.baml
+C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debug\Views\ListLeitorFormWindow.g.cs
+C:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\obj\Debug\Views\ListLeitorFormWindow.baml

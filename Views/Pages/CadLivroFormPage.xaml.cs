@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using System_Biblioteca.Models;
 
 namespace System_Biblioteca.Views.Pages
 {
@@ -22,21 +23,35 @@ namespace System_Biblioteca.Views.Pages
     /// </summary>
     public partial class CadLivroFormPage : Page
     {
-        //private Livro _livro = new Livro();
-        private Frame fraPaginas;
-
-        public CadLivroFormPage(/*Frame _frame*/)
+        private Livro _livro = new Livro();
+        public CadLivroFormPage()
         {
             InitializeComponent();
-            //fraPaginas = _frame;
+            
         }
-        /*
-        public CadLivroFormPage(Livro livro, Frame _frame)
+
+        private void btnSalvarLivro_Click(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
-            fraPaginas = _frame;
-            _livro = livro;
-        }*/
+            _livro.CodigoLivro = txtCodLivro.Text;
+            _livro.TituloLivro = txtTituloLivro.Text;
+            _livro.SinopseLivro = txtSinopiseLivro.Text;
+            _livro.LocalizaoLivro = txtLocalLivro.Text;
+            _livro.DataPublicacaoLivro = dtpDataPubliLivro.SelectedDate;
+            _livro.Edicao = txtEdicaoLivro.Text;
+
+            try
+            {
+                var dao = new LivroDAO();
+
+                dao.Insert(_livro);
+                MessageBox.Show("Registro Salvo com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
         private void btnInserirImg_Click(object sender, RoutedEventArgs e)
         {
@@ -63,5 +78,6 @@ namespace System_Biblioteca.Views.Pages
         private void btnCancelarFun_Click(object sender, RoutedEventArgs e)
         {
         }
+
     }
 }

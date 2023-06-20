@@ -36,8 +36,8 @@
                 <Button x:Name="btnCadLivro" Content="Cadastrar Livro" FontSize="15" Width="167" Height="25" Click="btnCadLivro_Click" FontFamily="Bahnschrift"/>
                 <Button x:Name="btnCadLeitor" Content="Cadastrar Leitor" FontSize="15" Width="167" Height="25" Margin="0 20 0 0" Click="btnCadLeitor_Click" FontFamily="Bahnschrift"/>
                 <Button x:Name="btnCadAutor" Content="Cadastrar Autor" FontSize="15" Width="167" Height="25" Margin="0 20 0 0" Click="btnCadAutor_Click" FontFamily="Bahnschrift"/>
-                <Button x:Name="btnCadFornecedor" Content="Cadastrar Fornecedor" FontSize="15" Width="167" Height="25" Margin="0 20 0 0" Click="btnCadFornecedor_Click" FontFamily="Bahnschrift"/>
-                <Button x:Name="btnCadFuncionario" Content="Cadastrar Funcionário" FontSize="15" Width="167" Height="25" Margin="0 20 0 0" Click="btnCadFuncionario_Click" FontFamily="Bahnschrift"/>
+                <Button x:Name="btnCadFornecedor" Content="Cadastrar Fornecedor" FontSize="13" Width="167" Height="25" Margin="0 20 0 0" Click="btnCadFornecedor_Click" FontFamily="Bahnschrift"/>
+                <Button x:Name="btnCadFuncionario" Content="Cadastrar Funcionário" FontSize="13" Width="167" Height="25" Margin="0 20 0 0" Click="btnCadFuncionario_Click" FontFamily="Bahnschrift"/>
             </StackPanel>
 
             <StackPanel>
@@ -46,8 +46,8 @@
                     <Rectangle Width="78" Height="2" Fill="Black"/>
                 </StackPanel>
 
-                <Button x:Name="btnGenLeitor" Content="Gerenciar Leitor" FontSize="15" Width="167" Height="25" Click="btnGenLeitor_Click" FontFamily="Bahnschrift"/>
-                <Button x:Name="btnGenFuncionario" Content="Gerenciar Funcionario" FontSize="15" Width="167" Height="25" Margin="0 20 0 0" FontFamily="Bahnschrift" Click="btnGenFuncionario_Click"/>
+                <Button x:Name="btnGenLeitor" Content="Gerenciar Leitor" FontSize="15" Width="167" Height="25" Click="btnGenLeitor_Click" FontFamily="Bahnschrift" Cursor="Hand"/>
+                <Button x:Name="btnGenFuncionario" Content="Gerenciar Funcionario" FontSize="13" Width="167" Height="25" Margin="0 20 0 0" FontFamily="Bahnschrift" Click="btnGenFuncionario_Click"/>
                 <Button x:Name="btnGenAcervo" Content="Gerenciar Acervo" FontSize="15" Width="167" Height="25" Margin="0 20 0 0" Click="btnGenAcervo_Click" FontFamily="Bahnschrift"/>
             </StackPanel>
 

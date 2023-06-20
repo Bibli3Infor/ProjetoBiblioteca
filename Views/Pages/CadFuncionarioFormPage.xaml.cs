@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
+using System_Biblioteca.Models;
 
 namespace System_Biblioteca.Views.Pages
 {
@@ -22,10 +23,45 @@ namespace System_Biblioteca.Views.Pages
     /// </summary>
     public partial class CadFuncionarioFormPage : Page
     {
+        private Funcionario _funcionario = new Funcionario();
+
         public CadFuncionarioFormPage()
         {
-            InitializeComponent();
+            InitializeComponent();    
         }
+
+        private void btnSalvarFun_Click(object sender, RoutedEventArgs e)
+        {
+            _funcionario.NomeFuncionario = txtNome.Text;
+            _funcionario.EmailFuncionario = txtEmail.Text;
+            _funcionario.CpfFuncionario = txtCpf.Text;
+            _funcionario.RgFuncionario = txtRg.Text;
+            _funcionario.EnderecoFuncionario = txtEndereco.Text;
+            _funcionario.TelefoneFuncionario = txtTelefone.Text;
+            _funcionario.Turno = cmbTurnoFuncionario.Text;
+            if (_funcionario.SexoFuncinario == "Feminino")
+            {
+                rdbtFeminino.IsChecked = true;
+            }
+            else
+            {
+                rdbtMasculino.IsChecked = true;
+            }
+            _funcionario.DataNascimentoFuncionario = dtpDataNascFuncionario.SelectedDate;
+
+            try
+            {
+                var dao = new FuncionarioDAO();
+
+                dao.Insert(_funcionario);
+                MessageBox.Show("Registro Salvo com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void btnInserirImg_Click(object sender, RoutedEventArgs e)
         {
             //var dao = new FuncionarioDAO();

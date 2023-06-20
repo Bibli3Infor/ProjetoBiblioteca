@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System_Biblioteca.Views;
 
 namespace System_Biblioteca.Views.Pages
 {
@@ -23,6 +24,12 @@ namespace System_Biblioteca.Views.Pages
         public GenFuncionarioFormPage()
         {
             InitializeComponent();
+        }
+
+        private void btnListaFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            ListLivroFormWindow view = new ListLivroFormWindow();
+            view.ShowDialog();
         }
     }
 }

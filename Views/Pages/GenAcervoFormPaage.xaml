@@ -23,18 +23,18 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="50 0 0 0">
 
-            <StackPanel Background="White" Margin="0 0 50 0" Height="484" Width="232">
+            <!--<StackPanel Background="White" Margin="0 0 50 0" Height="484" Width="232">
                 <Label Content="Gêneros" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold"/>
                 <DataGrid Height="433"  Margin="10 0 10 10" Width="208">
 
                 </DataGrid>
-            </StackPanel>
+            </StackPanel>-->
 
-            <StackPanel  Background="White" Height="504" Width="391">
+            <StackPanel  Background="White" Height="504" Width="652">
                 <StackPanel Orientation="Horizontal">
-                    <StackPanel VerticalAlignment="Top" Margin="15">
+                    <StackPanel VerticalAlignment="Top" Margin="85 0 0 0">
                         <TextBlock Text="Pesquisar Livro:" HorizontalAlignment="Center" FontSize="20" Margin="60 0 0 0" FontWeight="Normal"/>
-                        <ComboBox x:Name="cbmLivro" Width="251" Height="40" Margin="40 0 0 0"/>
+                        <ComboBox x:Name="cbmLivro" Width="421" Height="40" Margin="40 0 0 0"/>
 
 
                     </StackPanel>
@@ -56,9 +56,12 @@
                     </StackPanel>
                 </StackPanel>
 
-                <StackPanel Margin="0 0 0 0" Height="414" Width="394">
-                    <DataGrid Height="397" Width="342">
-
+                <StackPanel Margin="0 0 0 0" Height="390" Width="600">
+                    <DataGrid x:Name="dataGridLivros" Height="397" Width="524" IsReadOnly="true" Foreground="White" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Título" Binding="{Binding TituloLivro}" Foreground="Black" FontSize="18" Width="250"/>
+                            <DataGridTextColumn Header="Edição" Binding="{Binding Edicao}" Foreground="Black" FontSize="18" Width="250"/>
+                        </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
 

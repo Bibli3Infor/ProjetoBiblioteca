@@ -47,5 +47,11 @@ namespace System_Biblioteca.Views.Pages
                 }
             }
         }
+
+        private void btnListaLeitor_Click(object sender, RoutedEventArgs e)
+        {
+            ListLeitorFormWindow view = new ListLeitorFormWindow();
+            view.ShowDialog();
+        }
     }
 }

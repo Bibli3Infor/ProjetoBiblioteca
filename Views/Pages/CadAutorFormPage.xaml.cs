@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System_Biblioteca.Models;
 
 namespace System_Biblioteca.Views.Pages
 {
@@ -20,6 +21,9 @@ namespace System_Biblioteca.Views.Pages
     /// </summary>
     public partial class CadAutorFormPage : Page
     {
+
+        private Autor _autor = new Autor();
+
         public CadAutorFormPage()
         {
             InitializeComponent();
@@ -28,6 +32,35 @@ namespace System_Biblioteca.Views.Pages
         private void btnCancelarFun_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        private void btnSalvarAutor_Click(object sender, RoutedEventArgs e)
+        {
+            _autor.NomeAutor = txtNomeAutor.Text;
+            _autor.NacionalidadeAutor = txtNacionalidadeAutor.Text;
+            _autor.EmailAutor = txtEmailAutor.Text;
+            if (_autor.SexoAutor == "Feminino")
+            {
+                rdbtFemininoAutor.IsChecked = true;
+            }
+            else
+            {
+                rdbtMasculinoAutor.IsChecked = true;
+            }
+            _autor.ContatoAutor = txtContatoAutor.Text;
+            _autor.DataNascimentoAutor = dtpDataNascAutor.SelectedDate;
+
+            try
+            {
+                var dao = new AutorDAO();
+
+                dao.Insert(_autor);
+                MessageBox.Show("Registro Salvo com Sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

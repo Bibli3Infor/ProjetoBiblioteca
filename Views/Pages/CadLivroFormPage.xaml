@@ -64,7 +64,7 @@
             <TextBox x:Name="txtCodLivro" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
 
             <TextBlock Text="Edição:" FontSize="20" Width="92" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtCodALivro" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8" Height="116"/>
+            <TextBox x:Name="txtEdicaoLivro" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8" Height="116"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 80">
@@ -80,7 +80,7 @@
                 </Button>
             </Border>
             <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FF00E800"  Width="109" Height="44" Margin="50 0 60 0">
-                <Button x:Name="btnSalvarFun" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="90" Height="40"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Foreground="White">
+                <Button x:Name="btnSalvarLivro" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="90" Height="40"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Click="btnSalvarLivro_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">

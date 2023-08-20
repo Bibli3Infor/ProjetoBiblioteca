@@ -82,5 +82,26 @@ namespace System_Biblioteca.Models
                 throw ex;
             }
         }
+
+        public void Delete(Leitor t)
+        {
+            try
+            {
+                var comando = _conn.Query();
+                comando.CommandText = "DELETE FROM Leitor WHERE id_lei = @id";
+
+                comando.Parameters.AddWithValue("@id", t.Id);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                    throw new Exception("Registro não removido da base de dados." +
+                        "Verifique e tente novamente");
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

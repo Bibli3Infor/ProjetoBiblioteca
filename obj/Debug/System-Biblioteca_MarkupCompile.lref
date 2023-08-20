@@ -2,6 +2,8 @@
 FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\App.xaml;;
 FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\MainWindow.xaml;;
 FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\CadFuncionario.xaml;;
+FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\ListFuncionarioFormWindow.xaml;;
+FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\ListLeitorFormWindow.xaml;;
 FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\ListLivroFormWindow.xaml;;
 FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\Pages\AlugarLivroFormPage.xaml;;
 FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\Pages\CadAutorFormPage.xaml;;
@@ -15,6 +17,4 @@ FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\P
 FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\Pages\GenFuncionarioFormPage.xaml;;
 FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\Pages\GenLeitorFormPage.xaml;;
 FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\SideNavBarFormWindow.xaml;;
-FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\ListLeitorFormWindow.xaml;;
-FC:\Users\renan\OneDrive\Documentos\Projeto Biblioteca\ProjetoBiblioteca\Views\ListFuncionarioFormWindow.xaml;;
 

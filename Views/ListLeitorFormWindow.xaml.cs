@@ -43,5 +43,27 @@ namespace System_Biblioteca.Views
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnExcluirLeitor_Click(object sender, RoutedEventArgs e)
+        {
+            var leitorSelected = dataGridLeitor.SelectedItem as Leitor;
+
+            var result = MessageBox.Show($"Deseja realmente excluir o leitor '{leitorSelected.NomeLeitor}'?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao2 = new LeitorDAO();
+                    dao2.Delete(leitorSelected);
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

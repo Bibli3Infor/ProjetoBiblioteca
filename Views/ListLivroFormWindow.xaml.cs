@@ -32,16 +32,7 @@ namespace System_Biblioteca.Views
         }
         private void CarregarListagem()
         {
-            try
-            {
-                var dao = new FuncionarioDAO();
-                List<Funcionario> listaFuncionario = dao.List();
-                dataGridFuncionario.ItemsSource = listaFuncionario;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
     }
 }

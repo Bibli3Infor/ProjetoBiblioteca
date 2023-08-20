@@ -28,7 +28,7 @@ namespace System_Biblioteca.Views.Pages
 
         private void btnListaFuncionario_Click(object sender, RoutedEventArgs e)
         {
-            ListLivroFormWindow view = new ListLivroFormWindow();
+            ListFuncionarioFormWindow view = new ListFuncionarioFormWindow();
             view.ShowDialog();
         }
     }

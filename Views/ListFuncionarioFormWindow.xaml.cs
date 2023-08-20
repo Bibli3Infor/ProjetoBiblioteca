@@ -22,6 +22,7 @@ namespace System_Biblioteca.Views
     {
         public ListFuncionarioFormWindow()
         {
+            InitializeComponent();
             Loaded += ListFuncionarioFormWindow_Loaded;
         }
 
@@ -40,6 +41,28 @@ namespace System_Biblioteca.Views
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnExcluirFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            var funcionarioSelected = dataGridFuncionario.SelectedItem as Funcionario;
+
+            var result = MessageBox.Show($"Deseja realmente excluir o Funcionario '{funcionarioSelected.NomeFuncionario}'?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao2 = new FuncionarioDAO();
+                    dao2.Delete(funcionarioSelected);
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

@@ -23,20 +23,12 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
-            <TextBlock Text="Lista de Funcionarios" FontSize="22"
+            <TextBlock Text="Lista de Livros" FontSize="22"
                        Background="#FFC0DAF7"
                        Style="{StaticResource MaterialDesignHeadline4TextBlock}"
                        Padding="1"/>
         </StackPanel>
 
-        <DataGrid x:Name="dataGridFuncionario" Grid.Row="1" IsReadOnly="true" Foreground="White" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Nome" Binding="{Binding NomeFuncionario}" Foreground="Black" FontSize="18" Width="200"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding EmailFuncionario}" Foreground="Black" FontSize="18" Width="200"/>
-                <DataGridTextColumn Header="Cpf" Binding="{Binding CpfFuncionario}" Foreground="Black" FontSize="18" Width="200"/>
-                <DataGridTextColumn Header="Rg" Binding="{Binding RgFuncionario}" Foreground="Black" FontSize="18" Width="200"/>
-                <DataGridTextColumn Header="Turno" Binding="{Binding Turno}" Foreground="Black" FontSize="18" Width="200"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        
     </Grid>
 </Window>

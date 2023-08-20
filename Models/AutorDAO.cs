@@ -58,10 +58,12 @@ namespace System_Biblioteca.Models
                     var autor = new Autor();
 
                     autor.Id = reader.GetInt32("id_aut");
-                    autor.NomeAutor = DAOHelper.GetString(reader, "codigo_liv");
-                    autor.NacionalidadeAutor = DAOHelper.GetString(reader, "titulo_liv");
-                    autor.EmailAutor = DAOHelper.GetString(reader, "sinopse_liv");
-                    autor._sexo = DAOHelper.GetString(reader, "localizacao_liv");
+                    autor.NomeAutor = DAOHelper.GetString(reader, "nome_aut");
+                    autor.NacionalidadeAutor = DAOHelper.GetString(reader, "nacionalidade_aut");
+                    autor.EmailAutor = DAOHelper.GetString(reader, "email_aut");
+                    autor._sexo = DAOHelper.GetString(reader, "sexo_aut");
+                    autor.ContatoAutor = DAOHelper.GetString(reader, "contato_aut");
+                    autor.DataNascimentoAutor = DAOHelper.GetDateTime(reader, "data_nasc_aut");
                     
                     
 
@@ -74,6 +76,27 @@ namespace System_Biblioteca.Models
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        public void Delete(Autor t)
+        {
+            try
+            {
+                var comando = _conn.Query();
+                comando.CommandText = "DELETE FROM Autor WHERE id_aut = @id";
+
+                comando.Parameters.AddWithValue("@id", t.Id);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                    throw new Exception("Registro não removido da base de dados." +
+                        "Verifique e tente novamente");
+            }
+            catch (Exception e)
+            {
+                throw e;
             }
         }
 

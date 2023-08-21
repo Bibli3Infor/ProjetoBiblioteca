@@ -9,118 +9,41 @@
       Title="GenLeitorFormPage">
 
     <Grid Background="Aqua">
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="170"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="180"/>
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="120"/>
-        </Grid.ColumnDefinitions>
-
-
-        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-            <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="Pesquisar Leitor:" FontSize="20" Margin="0 0 0 0" FontWeight="Normal"/>
-                <ComboBox x:Name="cbmLeitor" Width="605" Height="40" HorizontalAlignment="Center"/>
-            </StackPanel>
-
-            <StackPanel VerticalAlignment="Center" Margin="0 20 0 0">
-                <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20"  Width="70" Height="70" Margin="50 0 60 0" Background="White">
-                    <Button x:Name="btnPesquisar"  FontSize="15" Padding="8" Width="60" Height="60"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Margin="0 0 0 0" Foreground="White">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Views/Pages/pesquisar icon.png"/>
-                        </Button.Background>
-                        <Button.Template>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                </Border>
-               
-            </StackPanel>
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Lista de Leitores" FontSize="25" Margin="0 10 0 0"
+                       Background="Aqua"
+                       HorizontalAlignment="Center"
+                       Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                       Padding="1"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Orientation="Vertical">
-            <TextBlock Text="Nome Completo:" FontSize="20" Margin="0 0 0 0"/>
-            <TextBox x:Name="txtNomeLei" Width="700" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+        <DataGrid x:Name="dataGridLeitor" Grid.Row="1" IsReadOnly="true" Foreground="White" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome" Binding="{Binding NomeLeitor}" Foreground="Black" FontSize="18" Width="300"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding EmailLeitor}" Foreground="Black" FontSize="18" Width="300"/>
+                <DataGridTextColumn Header="Cpf" Binding="{Binding CpfLeitor}" Foreground="Black" FontSize="18" Width="200"/>
+                <DataGridTextColumn Header="Rg" Binding="{Binding RgLeitor}" Foreground="Black" FontSize="18" Width="150"/>
+                <DataGridTextColumn Header="Telefone" Binding="{Binding TelefoneLeitor}" Foreground="Black" FontSize="18" Width="200"/>
 
-            <TextBlock Text="Email:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtEmailLei" Width="700" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
-
-            <TextBlock Text="Endereço:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtEnderecoLei" Width="700" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
-
-            <TextBlock Text="Telefone:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtTelefoneLei" Width="550" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
-
-            <TextBlock Text="Sexo:" FontSize="20" Margin="0 30 0 0"/>
-            <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                <RadioButton x:Name="rdbtFemininoLei" Content="Feminino" FontSize="15" Margin="0 0 0 0"/>
-                <RadioButton x:Name="rdbtMasculinoLei" Content="Masculino" FontSize="15" Margin="50 0 0 0"/>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Orientation="Vertical" Margin="0 0 60 0">
-            <TextBlock Text="CPF:" FontSize="20" Margin="110 0 0 0"/>
-            <TextBox x:Name="txtCpfLei" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
-
-            <TextBlock Text="RG:" FontSize="20" Margin="110 30 0 0"/>
-            <TextBox x:Name="txtRgLei" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
-
-            <TextBlock Text="Código de Acesso:" FontSize="20" Margin="110 30 0 0"/>
-            <TextBox x:Name="txtCodAcessLei" Width="300" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
-
-            <TextBlock Text="Data de Nascimento:" FontSize="20" Margin="0 30 0 0"/>
-            <DatePicker x:Name="dtpDataNascLei" Background="White" Width="409" Padding="10" HorizontalAlignment="Left" Margin="0 10 0 0"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
-
-            <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FFCE1919"  Width="109" Height="44" >
-                <Button x:Name="btnExcluirLei" Content="Excluir" FontSize="15" Padding="8" Width="90" Cursor="Hand" Background="#FFCE1919" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Margin="10,2,9,2">
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </Border>
-
-            <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FF00E800"  Width="109" Height="44" Margin="50 0 60 0">
-                <Button x:Name="btnSalvarFun" Background="#FF00E800" Content="Salvar" FontSize="15" Padding="8" Width="90" Height="40"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Foreground="White">
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </Border>
-            
-            
-        </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 50">
-            <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FFBD9494"  Width="199" Height="60" >
-                <Button x:Name="btnListaLeitor" Content="Lista de Leitores" FontSize="15" Padding="8" Width="150" Cursor="Hand" Background="#FFBD9494" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Margin="10,2,9,2" Click="btnListaLeitor_Click">
-                    <Button.Template>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            </Border>
-        </StackPanel>
+                <DataGridTemplateColumn Header="Ações" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnExcluirLeitor" Foreground="White" FontSize="14" Width="80"
+                                        Click="btnExcluirLeitor_Click"
+                                        Content="Deletar"
+                                        ToolTip="Excluir Registro"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

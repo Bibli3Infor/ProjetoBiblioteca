@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using System_Biblioteca.Models;
 
 namespace System_Biblioteca.Views.Pages
 {
@@ -25,33 +26,48 @@ namespace System_Biblioteca.Views.Pages
         public GenLeitorFormPage()
         {
             InitializeComponent();
+            Loaded += GenLeitorFormPage_Loaded;
         }
-        private void btnInserirImg_Click(object sender, RoutedEventArgs e)
+
+        private void GenLeitorFormPage_Loaded(object sender, RoutedEventArgs e)
         {
-            //var dao = new FuncionarioDAO();
-            string saida = Directory.GetCurrentDirectory();
-            string imgOriginal = saida.Substring(0, saida.Length - 9) + @"Imagens/avatar.jpg";
-            // saida = saida.Substring(0, saida.Length - 9) + @"Funcionarios/" + VrsGlobais.nomeLogado + "/";
-
-            string sourcePath = "", fileName = "";
-
-            OpenFileDialog opf = new OpenFileDialog();
-            if (opf.ShowDialog() == true)
+            CarregarListagem();
+        }
+        private void CarregarListagem()
+        {
+            try
             {
-                sourcePath = opf.FileName;
-                fileName = opf.SafeFileName;
-
-                if (sourcePath != "")
-                {
-
-                }
+                var dao = new LeitorDAO();
+                List<Leitor> listaLeitor = dao.List();
+                dataGridLeitor.ItemsSource = listaLeitor;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void btnListaLeitor_Click(object sender, RoutedEventArgs e)
+        private void btnExcluirLeitor_Click(object sender, RoutedEventArgs e)
         {
-            ListLeitorFormWindow view = new ListLeitorFormWindow();
-            view.ShowDialog();
+            var leitorSelected = dataGridLeitor.SelectedItem as Leitor;
+
+            var result = MessageBox.Show($"Deseja realmente excluir o leitor '{leitorSelected.NomeLeitor}'?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao2 = new LeitorDAO();
+                    dao2.Delete(leitorSelected);
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
+
     }
 }

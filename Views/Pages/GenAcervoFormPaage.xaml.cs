@@ -51,10 +51,10 @@ namespace System_Biblioteca.Views.Pages
 
         private void btnEditarLivro_Click(object sender, RoutedEventArgs e)
         {
-            
+
             //var livroSelected = idLivro as Livro;
             //_frame.Content = new CadLivroFormPage(livroSelected, _frame);
-            
+
         }
 
         private void btnListaFuncionario_Click(object sender, RoutedEventArgs e)
@@ -70,6 +70,37 @@ namespace System_Biblioteca.Views.Pages
         private void btnListaAutores_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnExcluirLivro_Click(object sender, RoutedEventArgs e)
+        {
+            Livro livroSelecionado = (Livro)dataGridLivros.SelectedItem;
+
+
+
+            if (dataGridLivros.SelectedItem != null)
+            {
+                var result = MessageBox.Show($"Deseja realmente excluir o livro ${livroSelecionado.TituloLivro} ?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+                try
+                {
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        var dao2 = new LivroDAO();
+                        dao2.Delete(livroSelecionado);
+                        CarregarListagem();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um livro", "Exceção", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

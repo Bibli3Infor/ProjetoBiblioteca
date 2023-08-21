@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System_Biblioteca.Views;
+using System_Biblioteca.Models;
 
 namespace System_Biblioteca.Views.Pages
 {
@@ -24,12 +25,49 @@ namespace System_Biblioteca.Views.Pages
         public GenFuncionarioFormPage()
         {
             InitializeComponent();
+            Loaded += GenFuncionarioFormPage_Loaded;
         }
 
-        private void btnListaFuncionario_Click(object sender, RoutedEventArgs e)
+        private void GenFuncionarioFormPage_Loaded(object sender, RoutedEventArgs e)
         {
-            ListFuncionarioFormWindow view = new ListFuncionarioFormWindow();
-            view.ShowDialog();
+            CarregarListagem();
+        }
+
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new FuncionarioDAO();
+                List<Funcionario> listaFuncionario = dao.List();
+                dataGridFuncionario.ItemsSource = listaFuncionario;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnExcluirFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            var funcionarioSelected = dataGridFuncionario.SelectedItem as Funcionario;
+
+            var result = MessageBox.Show($"Deseja realmente excluir o Funcionario '{funcionarioSelected.NomeFuncionario}'?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao2 = new FuncionarioDAO();
+                    dao2.Delete(funcionarioSelected);
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

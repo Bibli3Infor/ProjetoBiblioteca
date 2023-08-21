@@ -57,7 +57,7 @@
                 </StackPanel>
 
                 <StackPanel Margin="0 0 0 0" Height="390" Width="600">
-                    <DataGrid x:Name="dataGridLivros" Height="397" Width="524" IsReadOnly="true" Foreground="White" AutoGenerateColumns="False">
+                    <DataGrid x:Name="dataGridLivros" Height="397" Width="524" IsReadOnly="true" Foreground="White" AutoGenerateColumns="False" >
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Título" Binding="{Binding TituloLivro}" Foreground="Black" FontSize="18" Width="250"/>
                             <DataGridTextColumn Header="Edição" Binding="{Binding Edicao}" Foreground="Black" FontSize="18" Width="250"/>
@@ -108,7 +108,7 @@
 
 
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Background="#FF000EE8"  Width="109" Height="44" Margin="0 0 50 0">
-                        <Button x:Name="btnExcluirLivro" Background="#FF000EE8" Content="Excluir" FontSize="15" Padding="8" Width="90" Height="40"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Foreground="White">
+                        <Button x:Name="btnExcluirLivro" Background="#FF000EE8" Content="Excluir" FontSize="15" Padding="8" Width="90" Height="40"  Cursor="Hand" FontWeight="Bold" BorderBrush="#00707070" Foreground="White" Click="btnExcluirLivro_Click">
                             <Button.Template>
                                 <ControlTemplate TargetType="{x:Type Button}">
                                     <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}">

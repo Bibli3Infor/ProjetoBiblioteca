@@ -296,6 +296,9 @@
   <ItemGroup>
     <Resource Include="Views\Pages\favorito.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Pages\delete_4219.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.8.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -17,7 +17,7 @@ namespace System_Biblioteca.Database
 
         private static string user = "root";
 
-        private static string password = "root";
+        private static string password = "Star@pixel4268!";
 
         private static string dbname = "BD_Biblioteca";
 

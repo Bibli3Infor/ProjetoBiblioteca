@@ -24,30 +24,30 @@
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="Nome Completo:" FontSize="20" Margin="0 0 0 0"/>
-                    <TextBox x:Name="txtNome" Width="600" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" TextChanged="txtNome_TextChanged"/>
+                    <TextBox x:Name="txtNome" Width="600" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" TextChanged="txtNome_TextChanged" FontSize="14" FontFamily="Segoe UI"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="10 0 0 0">
                     <TextBlock Text="CPF:" FontSize="20" Margin="110 0 0 0"/>
-                    <TextBox x:Name="txtCpf" Width="250" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
+                    <TextBox x:Name="txtCpf" Width="250" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8" FontSize="14"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="Email:" FontSize="20" Margin="0 30 0 0"/>
-                    <TextBox x:Name="txtEmail" Width="600" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+                    <TextBox x:Name="txtEmail" Width="600" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" FontSize="14"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical" Margin="10 0 0 0">
                     <TextBlock Text="RG:" FontSize="20" Margin="110 30 0 0"/>
-                    <TextBox x:Name="txtRg" Width="250" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8"/>
+                    <TextBox x:Name="txtRg" Width="250" HorizontalAlignment="Right" Margin="0 10 0 0" Padding="8" FontSize="14"/>
                 </StackPanel>
             </StackPanel>
 
 
             <TextBlock Text="Endereço:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtEndereco" Width="860" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBox x:Name="txtEndereco" Width="860" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" FontSize="14"/>
 
             <TextBlock Text="Telefone:" FontSize="20" Margin="0 30 0 0"/>
-            <TextBox x:Name="txtTelefone" Width="650" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8"/>
+            <TextBox x:Name="txtTelefone" Width="650" HorizontalAlignment="Left" Margin="0 10 0 0" Padding="8" FontSize="14"/>
 
             <TextBlock Text="Sexo:" FontSize="20" Margin="0 30 0 0"/>
             <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
